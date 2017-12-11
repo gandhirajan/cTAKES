@@ -1,80 +1,184 @@
 {
-    "DrugChangeStatusAnnotation": [],
-    "StrengthAnnotation": [],
-    "FractionStrengthAnnotation": [],
-    "FrequencyUnitAnnotation": [],
-    "CompanyAnnotation": [],
-    "DiseaseDisorderMention": [
-        "DISEASE",
-        "NODULES",
-        "DIVERTICULOSIS",
-        "HEPATOCELLULAR CARCINOMA",
-        "BLOOD",
-        "ACUTE PNEUMONIA",
-        "METASTATIC HEPATOCELLULAR CARCINOMA",
-        "HEART FAILURE",
-        "DEEP VEIN THROMBOSIS",
-        "CARCINOMA",
-        "CONDITION"
-    ],
-    "SignSymptomMention": [
-        "BRIGHT RED",
-        "CLOTS",
-        "DEATH",
-        "VEIN THROMBOSIS",
-        "BLEEDING",
-        "TIRED",
-        "CLOT",
-        "FATIGUE",
-        "NEGATIVE",
-        "LOWER EXTREMITY EDEMA",
-        "DYSPNEA ON EXERTION",
-        "GASTROINTESTINAL BLEEDING",
-        "INSOMNIA",
-        "PAST MEDICAL HISTORY",
-        "RELATED",
-        "GASTROINTESTINAL BLEED",
-        "HEMATOCHEZIA",
-        "COMPLAINT",
-        "LIVER LESION",
-        "PROGRESSION",
-        "CARE"
-    ],
-    "RouteAnnotation": [],
-    "DateAnnotation": [
-        "03/02",
-        "1-21",
-        "06/07/02",
-        "07/13/02",
-        "07/14/02",
-        "07/15/02",
-        "27AUG02",
-        "07JUN02",
-        "29JUL02",
-        "05AUG02",
-        "20AUG02",
-        "25AUG02"
-    ],
-    "MeasurementAnnotation": [
-        "20 MG/M2"
-    ],
-    "ProcedureMention": [
-        "SCANS",
-        "CHEST X-RAY",
-        "TREATMENT",
-        "TOMOGRAPHY",
-        "ULTRASOUND",
-        "THERAPY",
-        "INR",
-        "INTERNATIONAL NORMALIZED RATIO",
-        "HEMATOCRIT"
-    ],
-    "TimeMention": [
-        "07/13/02",
-        "THE DAY",
-        "07/15/02",
-        "THIS TIME",
-        "TWO"
-    ],
-    "StrengthUnitAnnotation": []
+    "AnatomicalSiteMention": {
+        "EYE": [
+            [
+                "codingScheme: SNOMEDCT_US",
+                "code: 371398005",
+                "cui: C0015392",
+                "tui: T023"
+            ],
+            [
+                "codingScheme: SNOMEDCT_US",
+                "code: 81745001",
+                "cui: C0015392",
+                "tui: T023"
+            ]
+        ]
+    },
+    "DrugChangeStatusAnnotation": {},
+    "StrengthAnnotation": {},
+    "FractionStrengthAnnotation": {},
+    "FrequencyUnitAnnotation": {},
+    "DiseaseDisorderMention": {
+        "HYPERCALCEMIA": [
+            [
+                "codingScheme: MDR",
+                "code: 10020587",
+                "cui: C0020437",
+                "tui: T047"
+            ],
+            [
+                "codingScheme: SNOMEDCT_US",
+                "code: 166702002",
+                "cui: C0020437",
+                "tui: T047"
+            ],
+            [
+                "codingScheme: MDR",
+                "code: 10020583",
+                "cui: C0020437",
+                "tui: T047"
+            ],
+            [
+                "codingScheme: MDR",
+                "code: 10005396",
+                "cui: C0020437",
+                "tui: T047"
+            ],
+            [
+                "codingScheme: MDR",
+                "code: 10006952",
+                "cui: C0020437",
+                "tui: T047"
+            ],
+            [
+                "codingScheme: SNOMEDCT_US",
+                "code: 66931009",
+                "cui: C0020437",
+                "tui: T047"
+            ]
+        ],
+        "METASTATIC CANCER": [
+            [
+                "codingScheme: MDR",
+                "code: 10027478",
+                "cui: C2939420",
+                "tui: T191"
+            ],
+            [
+                "codingScheme: MDR",
+                "code: 10061289",
+                "cui: C2939419",
+                "tui: T191"
+            ],
+            [
+                "codingScheme: SNOMEDCT_US",
+                "code: 128462008",
+                "cui: C2939419",
+                "tui: T191"
+            ],
+            [
+                "codingScheme: SNOMEDCT_US",
+                "code: 79282002",
+                "cui: C2939419",
+                "tui: T191"
+            ],
+            [
+                "codingScheme: SNOMEDCT_US",
+                "code: 14799000",
+                "cui: C2939419",
+                "tui: T191"
+            ]
+        ]
+    },
+    "SignSymptomMention": {
+        "NAUSEA": [
+            [
+                "codingScheme: MDR",
+                "code: 10037730",
+                "cui: C0027497",
+                "tui: T184"
+            ],
+            [
+                "codingScheme: MDR",
+                "code: 10016361",
+                "cui: C0027497",
+                "tui: T184"
+            ],
+            [
+                "codingScheme: MDR",
+                "code: 10028823",
+                "cui: C0027497",
+                "tui: T184"
+            ],
+            [
+                "codingScheme: SNOMEDCT_US",
+                "code: 422587007",
+                "cui: C0027497",
+                "tui: T184"
+            ],
+            [
+                "codingScheme: MDR",
+                "code: 10028813",
+                "cui: C0027497",
+                "tui: T184"
+            ],
+            [
+                "codingScheme: MDR",
+                "code: 10028822",
+                "cui: C0027497",
+                "tui: T184"
+            ]
+        ],
+        "RED EYE": [
+            [
+                "codingScheme: MDR",
+                "code: 10015963",
+                "cui: C0235267",
+                "tui: T184"
+            ],
+            [
+                "codingScheme: SNOMEDCT_US",
+                "code: 703630003",
+                "cui: C0235267",
+                "tui: T184"
+            ],
+            [
+                "codingScheme: MDR",
+                "code: 10016009",
+                "cui: C0235267",
+                "tui: T184"
+            ],
+            [
+                "codingScheme: MDR",
+                "code: 10015962",
+                "cui: C0235267",
+                "tui: T184"
+            ],
+            [
+                "codingScheme: SNOMEDCT_US",
+                "code: 75705005",
+                "cui: C0235267",
+                "tui: T184"
+            ],
+            [
+                "codingScheme: MDR",
+                "code: 10038189",
+                "cui: C0235267",
+                "tui: T184"
+            ],
+            [
+                "codingScheme: MDR",
+                "code: 10038205",
+                "cui: C0235267",
+                "tui: T184"
+            ]
+        ]
+    },
+    "RouteAnnotation": {},
+    "DateAnnotation": {},
+    "MeasurementAnnotation": {},
+    "ProcedureMention": {},
+    "TimeMention": {},
+    "StrengthUnitAnnotation": {}
 }
