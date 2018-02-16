@@ -19,11 +19,12 @@
 package org.apache.ctakes.rest.service;
 
 import org.apache.commons.io.output.ByteArrayOutputStream;
-import org.apache.ctakes.core.cc.pretty.plaintext.PrettyTextWriter;
 import org.apache.ctakes.core.pipeline.PipelineBuilder;
 import org.apache.ctakes.core.pipeline.PiperFileReader;
 import org.apache.ctakes.core.util.textspan.DefaultTextSpan;
 import org.apache.ctakes.core.util.textspan.TextSpan;
+import org.apache.ctakes.relationextractor.pipelines.RelationExtractorConsumer;
+import org.apache.ctakes.rest.util.RelationExtractorHelper;
 import org.apache.ctakes.rest.util.XMLParser;
 import org.apache.ctakes.typesystem.type.relation.TemporalTextRelation;
 import org.apache.ctakes.typesystem.type.textspan.Sentence;
@@ -40,9 +41,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.ServletException;
-import java.io.BufferedWriter;
 import java.io.ByteArrayInputStream;
-import java.io.StringWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
@@ -58,22 +57,27 @@ public class CtakesRestController {
     private static final Logger LOGGER = Logger.getLogger(CtakesRestController.class);
     private static final String DEFAULT_PIPER_FILE_PATH = "pipers/Default.piper";
     private static final String FULL_PIPER_FILE_PATH = "pipers/Full.piper";
+    private static final String DEFAULT_PIPELINE = "Default";
+    private static final String FULL_PIPELINE = "Full";
     private static final Map<String, PipelineRunner> _pipelineRunners = new HashMap<>();
 
     @PostConstruct
     public void init() throws ServletException {
         LOGGER.info("Initializing analysis engines and jcas pools");
-        _pipelineRunners.put("Default", new PipelineRunner(DEFAULT_PIPER_FILE_PATH));
-        _pipelineRunners.put("Full", new PipelineRunner(FULL_PIPER_FILE_PATH));
+        _pipelineRunners.put(DEFAULT_PIPELINE, new PipelineRunner(DEFAULT_PIPER_FILE_PATH));
+        _pipelineRunners.put(FULL_PIPELINE, new PipelineRunner(FULL_PIPER_FILE_PATH));
     }
 
     @RequestMapping(value = "/analyze", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Map<String, List<String>>> getAnalyzedJSON(@RequestBody String analysisText, @RequestParam("pipeline") String pipelineParam)
+    public Map<String, Map<String, List<String>>> getAnalyzedJSON(@RequestBody String analysisText,
+                                                                  @RequestParam("pipeline") Optional<String> pipelineOptParam)
             throws Exception {
-        String pipeline = "Default";
-        if (pipelineParam != null && "Full".equals(pipelineParam)) {
-            pipeline = pipelineParam;
+        String pipeline = DEFAULT_PIPELINE;
+        if(pipelineOptParam.isPresent()) {
+            if(FULL_PIPELINE.equalsIgnoreCase(pipelineOptParam.get())) {
+                pipeline = FULL_PIPELINE;
+            }
         }
         final PipelineRunner runner = _pipelineRunners.get(pipeline);
         return runner.process(analysisText);
@@ -106,7 +110,7 @@ public class CtakesRestController {
             }
         }
 
-        private Map<String, Map<String, List<String>>> process(final String text) throws ServletException {
+        public Map<String, Map<String, List<String>>> process(final String text) throws ServletException {
             JCas jcas = null;
             Map<String, Map<String, List<String>>> resultMap = null;
             if (text != null) {
@@ -123,7 +127,15 @@ public class CtakesRestController {
                         tlinkMap.put("TLINKS:", tlinkList);
                         resultMap.put("TlinkDetails", tlinkMap);
                     }
-
+                    RelationExtractorHelper consumer = new RelationExtractorHelper();
+                    String relationDetails = consumer.process(jcas);
+                    if(relationDetails != null) {
+                        Map<String,List<String>> relationMap = new HashMap<>();
+                        List<String> relationList = new ArrayList<>();
+                        relationList.add(relationDetails);
+                        relationMap.put("RELATIONS:", relationList);
+                        resultMap.put("RelationDetails", relationMap);
+                    }
                     _pool.releaseJCas(jcas);
                 } catch (Exception e) {
                     LOGGER.error("Error processing Analysis engine");
@@ -132,6 +144,7 @@ public class CtakesRestController {
             }
             return resultMap;
         }
+
 
         private String getTlinks(JCas jcas) throws Exception {
             final StringBuilder sb = new StringBuilder();
