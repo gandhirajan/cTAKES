@@ -1,18 +1,336 @@
 {
     "AnatomicalSiteMention": {
-        "EYE": [
-            [
-                "codingScheme: SNOMEDCT_US",
-                "code: 371398005",
-                "cui: C0015392",
-                "tui: T023"
-            ],
-            [
-                "codingScheme: SNOMEDCT_US",
-                "code: 81745001",
-                "cui: C0015392",
-                "tui: T023"
-            ]
+        "VAGINAL": [
+            "start: 1583",
+            "end: 1590",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 76784001, cui: C0042232, tui: T023]"
+        ],
+        "CELLS": [
+            "start: 2896",
+            "end: 2901",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 4421005, cui: C0007634, tui: T025]"
+        ],
+        "VAGINAL AREA": [
+            "start: 1480",
+            "end: 1492",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 279876006, cui: C0458850, tui: T029]"
+        ],
+        "LOWER GASTROINTESTINAL TRACT": [
+            "start: 124",
+            "end: 152",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 5668004, cui: C0226875, tui: T029]"
+        ],
+        "INTESTINAL": [
+            "start: 2025",
+            "end: 2035",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 261093006, cui: C0021853, tui: T023]",
+            "[codingScheme: SNOMEDCT_US, code: 113276009, cui: C0021853, tui: T023]"
+        ],
+        "TISSUE": [
+            "start: 2838",
+            "end: 2844",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 85756007, cui: C0040300, tui: T024]"
+        ],
+        "COLON": [
+            "start: 1647",
+            "end: 1652",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 263977005, cui: C0009368, tui: T023]",
+            "[codingScheme: SNOMEDCT_US, code: 71854001, cui: C0009368, tui: T023]"
+        ],
+        "PELVIC": [
+            "start: 1104",
+            "end: 1110",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 277113001, cui: C0030797, tui: T023]",
+            "[codingScheme: SNOMEDCT_US, code: 12921003, cui: C0030797, tui: T023]"
+        ],
+        "MUCOSAL": [
+            "start: 2981",
+            "end: 2988",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 414781009, cui: C0026724, tui: T024]",
+            "[codingScheme: SNOMEDCT_US, code: 313268005, cui: C0026724, tui: T024]"
+        ],
+        "ORAL": [
+            "start: 72",
+            "end: 76",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 74262004, cui: C0226896, tui: T030]"
+        ],
+        "SIGMOID": [
+            "start: 1565",
+            "end: 1572",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 60184004, cui: C0227391, tui: T023]"
+        ],
+        "FAT TISSUE": [
+            "start: 2538",
+            "end: 2548",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 38888009, cui: C0001527, tui: T024]",
+            "[codingScheme: SNOMEDCT_US, code: 55603005, cui: C0001527, tui: T024]"
+        ],
+        "SIG": [
+            "start: 1637",
+            "end: 1640",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 423367003, cui: C0262329, tui: T023]"
+        ],
+        "LIP": [
+            "start: 2444",
+            "end: 2447",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 48477009, cui: C0023759, tui: T023]",
+            "[codingScheme: SNOMEDCT_US, code: 261114002, cui: C0023759, tui: T023]"
+        ],
+        "ABDOMINAL": [
+            "start: 1090",
+            "end: 1099",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 113345001, cui: C0000726, tui: T029]",
+            "[codingScheme: SNOMEDCT_US, code: 277112006, cui: C0000726, tui: T029]"
+        ],
+        "VAGINAL WALL": [
+            "start: 1583",
+            "end: 1595",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 263355003, cui: C0447612, tui: T023]"
+        ],
+        "SCALE": [
+            "start: 4134",
+            "end: 4139",
+            "polarity: 1",
+            "[codingScheme: MDR, code: 10039518, cui: C0222045, tui: T023]"
+        ]
+    },
+    "MedicationMention": {
+        "DRUG": [
+            "start: 4050",
+            "end: 4054",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 105903003, cui: C0013227, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 410942007, cui: C0013227, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 373873005, cui: C0013227, tui: T121]"
+        ],
+        "CYTOKINES": [
+            "start: 3094",
+            "end: 3103",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 75777003, cui: C0079189, tui: T129]",
+            "[codingScheme: SNOMEDCT_US, code: 75777003, cui: C0079189, tui: T116]"
+        ],
+        "TNF": [
+            "start: 4278",
+            "end: 4281",
+            "polarity: 0",
+            "[codingScheme: MDR, code: 10060016, cui: C1168005, tui: T059]",
+            "[codingScheme: MDR, code: 10059981, cui: C1168005, tui: T059]"
+        ],
+        "ADR": [
+            "start: 4065",
+            "end: 4068",
+            "polarity: 1",
+            "[codingScheme: RXNORM, code: 3639, cui: C0013089, tui: T195]",
+            "[codingScheme: RXNORM, code: 3639, cui: C0013089, tui: T109]",
+            "[codingScheme: SNOMEDCT_US, code: 372817009, cui: C0013089, tui: T195]",
+            "[codingScheme: SNOMEDCT_US, code: 372817009, cui: C0013089, tui: T109]",
+            "[codingScheme: SNOMEDCT_US, code: 68444001, cui: C0013089, tui: T195]",
+            "[codingScheme: SNOMEDCT_US, code: 68444001, cui: C0013089, tui: T109]"
+        ],
+        "INTERLEUKIN": [
+            "start: 2470",
+            "end: 2481",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 38476002, cui: C0021764, tui: T116]",
+            "[codingScheme: SNOMEDCT_US, code: 38476002, cui: C0021764, tui: T129]"
+        ],
+        "PREDNISONE": [
+            "start: 3370",
+            "end: 3380",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 116602009, cui: C0032952, tui: T109]",
+            "[codingScheme: RXNORM, code: 8640, cui: C0032952, tui: T121]",
+            "[codingScheme: RXNORM, code: 8640, cui: C0032952, tui: T125]",
+            "[codingScheme: RXNORM, code: 8640, cui: C0032952, tui: T109]",
+            "[codingScheme: SNOMEDCT_US, code: 10312003, cui: C0032952, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 10312003, cui: C0032952, tui: T125]",
+            "[codingScheme: SNOMEDCT_US, code: 10312003, cui: C0032952, tui: T109]",
+            "[codingScheme: SNOMEDCT_US, code: 116602009, cui: C0032952, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 116602009, cui: C0032952, tui: T125]"
+        ],
+        "TUMOR NECROSIS FACTOR": [
+            "start: 2333",
+            "end: 2354",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 39525005, cui: C1456820, tui: T116]",
+            "[codingScheme: SNOMEDCT_US, code: 8612007, cui: C1456820, tui: T129]",
+            "[codingScheme: SNOMEDCT_US, code: 8612007, cui: C1456820, tui: T116]",
+            "[codingScheme: SNOMEDCT_US, code: 39525005, cui: C1456820, tui: T129]"
+        ],
+        "DRUGS": [
+            "start: 2363",
+            "end: 2368",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 410942007, cui: C0013227, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 373873005, cui: C0013227, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 105903003, cui: C0013227, tui: T121]"
+        ],
+        "PROCESS": [
+            "start: 2591",
+            "end: 2598",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 719982003, cui: C1951340, tui: T121]"
+        ],
+        "TOFACITINIB": [
+            "start: 3303",
+            "end: 3314",
+            "polarity: 1",
+            "[codingScheme: RXNORM, code: 1357536, cui: C2930696, tui: T121]",
+            "[codingScheme: RXNORM, code: 1357536, cui: C2930696, tui: T109]",
+            "[codingScheme: SNOMEDCT_US, code: 704316006, cui: C2930696, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 704316006, cui: C2930696, tui: T109]",
+            "[codingScheme: SNOMEDCT_US, code: 704313003, cui: C2930696, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 704313003, cui: C2930696, tui: T109]"
+        ],
+        "LEFLUNOMIDE": [
+            "start: 1018",
+            "end: 1029",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 386981009, cui: C0063041, tui: T109]",
+            "[codingScheme: SNOMEDCT_US, code: 109143003, cui: C0063041, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 109143003, cui: C0063041, tui: T109]",
+            "[codingScheme: RXNORM, code: 27169, cui: C0063041, tui: T121]",
+            "[codingScheme: RXNORM, code: 27169, cui: C0063041, tui: T109]",
+            "[codingScheme: SNOMEDCT_US, code: 386981009, cui: C0063041, tui: T121]"
+        ],
+        "ANTIBIOTICS": [
+            "start: 1669",
+            "end: 1680",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 255631004, cui: C0003232, tui: T195]"
+        ],
+        "ORAL": [
+            "start: 72",
+            "end: 76",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 74262004, cui: C0226896, tui: T030]"
+        ],
+        "PREDNISOLONE": [
+            "start: 635",
+            "end: 647",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 52388000, cui: C0032950, tui: T109]",
+            "[codingScheme: SNOMEDCT_US, code: 116601002, cui: C0032950, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 116601002, cui: C0032950, tui: T109]",
+            "[codingScheme: RXNORM, code: 8638, cui: C0032950, tui: T121]",
+            "[codingScheme: RXNORM, code: 8638, cui: C0032950, tui: T109]",
+            "[codingScheme: SNOMEDCT_US, code: 52388000, cui: C0032950, tui: T121]"
+        ],
+        "IL-6": [
+            "start: 3318",
+            "end: 3322",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 30965005, cui: C0021760, tui: T129]",
+            "[codingScheme: SNOMEDCT_US, code: 30965005, cui: C0021760, tui: T116]",
+            "[codingScheme: RXNORM, code: 1367185, cui: C0021760, tui: T129]",
+            "[codingScheme: RXNORM, code: 1367185, cui: C0021760, tui: T116]"
+        ],
+        "TOCILIZUMAB": [
+            "start: 2174",
+            "end: 2185",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 444648007, cui: C1609165, tui: T129]",
+            "[codingScheme: RXNORM, code: 612865, cui: C1609165, tui: T121]",
+            "[codingScheme: RXNORM, code: 612865, cui: C1609165, tui: T116]",
+            "[codingScheme: RXNORM, code: 612865, cui: C1609165, tui: T129]",
+            "[codingScheme: SNOMEDCT_US, code: 444649004, cui: C1609165, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 444649004, cui: C1609165, tui: T116]",
+            "[codingScheme: SNOMEDCT_US, code: 444649004, cui: C1609165, tui: T129]",
+            "[codingScheme: SNOMEDCT_US, code: 444648007, cui: C1609165, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 444648007, cui: C1609165, tui: T116]"
+        ],
+        "HYDROXYCHLOROQUINE": [
+            "start: 601",
+            "end: 619",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 373540008, cui: C0020336, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 373540008, cui: C0020336, tui: T109]",
+            "[codingScheme: RXNORM, code: 5521, cui: C0020336, tui: T121]",
+            "[codingScheme: RXNORM, code: 5521, cui: C0020336, tui: T109]",
+            "[codingScheme: SNOMEDCT_US, code: 83490000, cui: C0020336, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 83490000, cui: C0020336, tui: T109]"
+        ],
+        "PROB": [
+            "start: 4094",
+            "end: 4098",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 66094001, cui: C0033209, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 66094001, cui: C0033209, tui: T109]",
+            "[codingScheme: RXNORM, code: 8698, cui: C0033209, tui: T121]",
+            "[codingScheme: RXNORM, code: 8698, cui: C0033209, tui: T109]",
+            "[codingScheme: SNOMEDCT_US, code: 387365004, cui: C0033209, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 387365004, cui: C0033209, tui: T109]"
+        ],
+        "STEROID": [
+            "start: 809",
+            "end: 816",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 116566001, cui: C0038317, tui: T109]",
+            "[codingScheme: SNOMEDCT_US, code: 112113009, cui: C0038317, tui: T109]"
+        ],
+        "CIPRO": [
+            "start: 1293",
+            "end: 1298",
+            "polarity: 1",
+            "[codingScheme: RXNORM, code: 203563, cui: C0701042, tui: T121]",
+            "[codingScheme: RXNORM, code: 203563, cui: C0701042, tui: T109]"
+        ],
+        "NSAIDS": [
+            "start: 3620",
+            "end: 3626",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 16403005, cui: C0003211, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 372665008, cui: C0003211, tui: T121]"
+        ],
+        "JANUS KINASE INHIBITOR": [
+            "start: 77",
+            "end: 99",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 704312008, cui: C3854325, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 704315005, cui: C3854325, tui: T121]"
+        ],
+        "DAS": [
+            "start: 714",
+            "end: 717",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 49471004, cui: C0057671, tui: T121]",
+            "[codingScheme: SNOMEDCT_US, code: 49471004, cui: C0057671, tui: T109]"
+        ],
+        "FAT": [
+            "start: 2538",
+            "end: 2541",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 256674009, cui: C0015677, tui: T109]",
+            "[codingScheme: SNOMEDCT_US, code: 256674009, cui: C0015677, tui: T121]"
+        ],
+        "GAS": [
+            "start: 1440",
+            "end: 1443",
+            "polarity: 1",
+            "[codingScheme: RXNORM, code: 1021221, cui: C1704673, tui: T122]"
+        ],
+        "ANTIBIOTIC": [
+            "start: 1271",
+            "end: 1281",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 255631004, cui: C0003232, tui: T195]"
         ]
     },
     "DrugChangeStatusAnnotation": {},
@@ -20,165 +338,524 @@
     "FractionStrengthAnnotation": {},
     "FrequencyUnitAnnotation": {},
     "DiseaseDisorderMention": {
-        "HYPERCALCEMIA": [
-            [
-                "codingScheme: MDR",
-                "code: 10020587",
-                "cui: C0020437",
-                "tui: T047"
-            ],
-            [
-                "codingScheme: SNOMEDCT_US",
-                "code: 166702002",
-                "cui: C0020437",
-                "tui: T047"
-            ],
-            [
-                "codingScheme: MDR",
-                "code: 10020583",
-                "cui: C0020437",
-                "tui: T047"
-            ],
-            [
-                "codingScheme: MDR",
-                "code: 10005396",
-                "cui: C0020437",
-                "tui: T047"
-            ],
-            [
-                "codingScheme: MDR",
-                "code: 10006952",
-                "cui: C0020437",
-                "tui: T047"
-            ],
-            [
-                "codingScheme: SNOMEDCT_US",
-                "code: 66931009",
-                "cui: C0020437",
-                "tui: T047"
-            ]
+        "TUMOR NECROSIS": [
+            "start: 2333",
+            "end: 2347",
+            "polarity: 1",
+            "[codingScheme: MDR, code: 10054101, cui: C0333516, tui: T191]",
+            "[codingScheme: SNOMEDCT_US, code: 34823008, cui: C0333516, tui: T191]",
+            "[codingScheme: MDR, code: 10054094, cui: C0333516, tui: T191]"
         ],
-        "METASTATIC CANCER": [
-            [
-                "codingScheme: MDR",
-                "code: 10027478",
-                "cui: C2939420",
-                "tui: T191"
-            ],
-            [
-                "codingScheme: MDR",
-                "code: 10061289",
-                "cui: C2939419",
-                "tui: T191"
-            ],
-            [
-                "codingScheme: SNOMEDCT_US",
-                "code: 128462008",
-                "cui: C2939419",
-                "tui: T191"
-            ],
-            [
-                "codingScheme: SNOMEDCT_US",
-                "code: 79282002",
-                "cui: C2939419",
-                "tui: T191"
-            ],
-            [
-                "codingScheme: SNOMEDCT_US",
-                "code: 14799000",
-                "cui: C2939419",
-                "tui: T191"
-            ]
+        "JANUS": [
+            "start: 77",
+            "end: 82",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 57918009, cui: C0266700, tui: T019]"
+        ],
+        "ENTEROVAGINAL FISTULA": [
+            "start: 303",
+            "end: 324",
+            "polarity: 1",
+            "[codingScheme: MDR, code: 10052320, cui: C0948370, tui: T190]"
+        ],
+        "INTESTINAL PERFORATION": [
+            "start: 2025",
+            "end: 2047",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 56905009, cui: C0021845, tui: T047]",
+            "[codingScheme: MDR, code: 10034385, cui: C0021845, tui: T047]",
+            "[codingScheme: MDR, code: 10006056, cui: C0021845, tui: T047]",
+            "[codingScheme: MDR, code: 10034421, cui: C0021845, tui: T047]",
+            "[codingScheme: MDR, code: 10034413, cui: C0021845, tui: T047]",
+            "[codingScheme: MDR, code: 10034406, cui: C0021845, tui: T047]",
+            "[codingScheme: MDR, code: 10022694, cui: C0021845, tui: T047]"
+        ],
+        "CONFUSED": [
+            "start: 986",
+            "end: 994",
+            "polarity: 1",
+            "[codingScheme: MDR, code: 10027350, cui: C0009676, tui: T048]",
+            "[codingScheme: MDR, code: 10010298, cui: C0009676, tui: T048]",
+            "[codingScheme: MDR, code: 10010304, cui: C0009676, tui: T048]",
+            "[codingScheme: MDR, code: 10010305, cui: C0009676, tui: T048]",
+            "[codingScheme: MDR, code: 10010300, cui: C0009676, tui: T048]",
+            "[codingScheme: SNOMEDCT_US, code: 286933003, cui: C0009676, tui: T048]",
+            "[codingScheme: MDR, code: 10050462, cui: C0009676, tui: T048]",
+            "[codingScheme: MDR, code: 10010301, cui: C0009676, tui: T048]"
+        ],
+        "DISEASE": [
+            "start: 2646",
+            "end: 2653",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 64572001, cui: C0012634, tui: T047]"
+        ],
+        "RHEUMATOID ARTHRITIS": [
+            "start: 263",
+            "end: 283",
+            "polarity: 1",
+            "[codingScheme: MDR, code: 10037740, cui: C0003873, tui: T047]",
+            "[codingScheme: MDR, code: 10003683, cui: C0003873, tui: T047]",
+            "[codingScheme: MDR, code: 10003268, cui: C0003873, tui: T047]",
+            "[codingScheme: MDR, code: 10039073, cui: C0003873, tui: T047]",
+            "[codingScheme: MDR, code: 10042952, cui: C0003873, tui: T047]",
+            "[codingScheme: SNOMEDCT_US, code: 69896004, cui: C0003873, tui: T047]"
+        ],
+        "FISTULA": [
+            "start: 1545",
+            "end: 1552",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 118622000, cui: C0016169, tui: T190]",
+            "[codingScheme: SNOMEDCT_US, code: 428794004, cui: C0016169, tui: T190]",
+            "[codingScheme: MDR, code: 10016717, cui: C0016169, tui: T190]",
+            "[codingScheme: SNOMEDCT_US, code: 419351001, cui: C0016169, tui: T190]"
+        ],
+        "GASTROINTESTINAL  PERFORATION": [
+            "start: 1898",
+            "end: 1927",
+            "polarity: 1",
+            "[codingScheme: MDR, code: 10034411, cui: C0151664, tui: T047]",
+            "[codingScheme: SNOMEDCT_US, code: 51875005, cui: C0151664, tui: T047]",
+            "[codingScheme: MDR, code: 10018242, cui: C0151664, tui: T047]",
+            "[codingScheme: MDR, code: 10018001, cui: C0151664, tui: T047]"
+        ],
+        "DIVERTICULITIS": [
+            "start: 3464",
+            "end: 3478",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 307496006, cui: C0012813, tui: T047]",
+            "[codingScheme: MDR, code: 10013538, cui: C0012813, tui: T047]",
+            "[codingScheme: SNOMEDCT_US, code: 18126004, cui: C0012813, tui: T047]"
+        ],
+        "VAGINAL FISTULA": [
+            "start: 4001",
+            "end: 4016",
+            "polarity: 1",
+            "[codingScheme: MDR, code: 10065813, cui: C0042253, tui: T190]",
+            "[codingScheme: SNOMEDCT_US, code: 45135002, cui: C0042253, tui: T190]"
+        ],
+        "SIGMOID COLON": [
+            "start: 1565",
+            "end: 1578",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 92343006, cui: C0496864, tui: T191]",
+            "[codingScheme: SNOMEDCT_US, code: 363410008, cui: C0153436, tui: T191]",
+            "[codingScheme: MDR, code: 10026456, cui: C0153436, tui: T191]"
+        ],
+        "BLOOD": [
+            "start: 1228",
+            "end: 1233",
+            "polarity: -1",
+            "[codingScheme: MDR, code: 10005329, cui: C0851353, tui: T047]"
+        ],
+        "DIVERTICULOSIS": [
+            "start: 4175",
+            "end: 4189",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 397881000, cui: C1510475, tui: T047]",
+            "[codingScheme: MDR, code: 10013535, cui: C1510475, tui: T047]",
+            "[codingScheme: SNOMEDCT_US, code: 31113003, cui: C1510475, tui: T047]",
+            "[codingScheme: MDR, code: 10013532, cui: C1510475, tui: T047]",
+            "[codingScheme: MDR, code: 10013559, cui: C1510475, tui: T047]",
+            "[codingScheme: SNOMEDCT_US, code: 63532004, cui: C1510475, tui: T047]",
+            "[codingScheme: MDR, code: 10013534, cui: C1510475, tui: T047]",
+            "[codingScheme: MDR, code: 10013549, cui: C1510475, tui: T047]"
         ]
     },
     "SignSymptomMention": {
-        "NAUSEA": [
-            [
-                "codingScheme: MDR",
-                "code: 10037730",
-                "cui: C0027497",
-                "tui: T184"
-            ],
-            [
-                "codingScheme: MDR",
-                "code: 10016361",
-                "cui: C0027497",
-                "tui: T184"
-            ],
-            [
-                "codingScheme: MDR",
-                "code: 10028823",
-                "cui: C0027497",
-                "tui: T184"
-            ],
-            [
-                "codingScheme: SNOMEDCT_US",
-                "code: 422587007",
-                "cui: C0027497",
-                "tui: T184"
-            ],
-            [
-                "codingScheme: MDR",
-                "code: 10028813",
-                "cui: C0027497",
-                "tui: T184"
-            ],
-            [
-                "codingScheme: MDR",
-                "code: 10028822",
-                "cui: C0027497",
-                "tui: T184"
-            ]
+        "INFECTIONS": [
+            "start: 2967",
+            "end: 2977",
+            "polarity: 1",
+            "[codingScheme: MDR, code: 10021789, cui: C3714514, tui: T046]"
         ],
-        "RED EYE": [
-            [
-                "codingScheme: MDR",
-                "code: 10015963",
-                "cui: C0235267",
-                "tui: T184"
-            ],
-            [
-                "codingScheme: SNOMEDCT_US",
-                "code: 703630003",
-                "cui: C0235267",
-                "tui: T184"
-            ],
-            [
-                "codingScheme: MDR",
-                "code: 10016009",
-                "cui: C0235267",
-                "tui: T184"
-            ],
-            [
-                "codingScheme: MDR",
-                "code: 10015962",
-                "cui: C0235267",
-                "tui: T184"
-            ],
-            [
-                "codingScheme: SNOMEDCT_US",
-                "code: 75705005",
-                "cui: C0235267",
-                "tui: T184"
-            ],
-            [
-                "codingScheme: MDR",
-                "code: 10038189",
-                "cui: C0235267",
-                "tui: T184"
-            ],
-            [
-                "codingScheme: MDR",
-                "code: 10038205",
-                "cui: C0235267",
-                "tui: T184"
-            ]
+        "ADMINISTRATION": [
+            "start: 3229",
+            "end: 3243",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 416118004, cui: C1533734, tui: T061]"
+        ],
+        "ABLE": [
+            "start: 4100",
+            "end: 4104",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 371150009, cui: C1299581, tui: T033]"
+        ],
+        "RISK FACTORS": [
+            "start: 3666",
+            "end: 3678",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 80943009, cui: C0035648, tui: T033]"
+        ],
+        "FOLLOW-UP": [
+            "start: 3638",
+            "end: 3647",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 308273005, cui: C0589120, tui: T033]"
+        ],
+        "SIGNALING": [
+            "start: 3073",
+            "end: 3082",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 38952000, cui: C0037083, tui: T043]"
+        ],
+        "CARE": [
+            "start: 1376",
+            "end: 1380",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 161056001, cui: C0580931, tui: T033]"
+        ],
+        "DYSURIA": [
+            "start: 419",
+            "end: 426",
+            "polarity: 1",
+            "[codingScheme: MDR, code: 10013990, cui: C0013428, tui: T184]",
+            "[codingScheme: SNOMEDCT_US, code: 49650001, cui: C0013428, tui: T184]",
+            "[codingScheme: MDR, code: 10046603, cui: C0013428, tui: T184]",
+            "[codingScheme: MDR, code: 10027564, cui: C0013428, tui: T184]",
+            "[codingScheme: MDR, code: 10033521, cui: C0013428, tui: T184]"
+        ],
+        "NECROSIS": [
+            "start: 2339",
+            "end: 2347",
+            "polarity: 1",
+            "[codingScheme: MDR, code: 10028851, cui: C0027540, tui: T042]",
+            "[codingScheme: SNOMEDCT_US, code: 6574001, cui: C0027540, tui: T042]"
+        ],
+        "INHIBITION": [
+            "start: 2456",
+            "end: 2466",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 61511001, cui: C0021469, tui: T044]"
+        ],
+        "COMPLICATIONS": [
+            "start: 1882",
+            "end: 1895",
+            "polarity: -1",
+            "[codingScheme: SNOMEDCT_US, code: 116223007, cui: C0009566, tui: T046]"
+        ],
+        "ADVERSE EVENTS": [
+            "start: 1977",
+            "end: 1991",
+            "polarity: 1",
+            "[codingScheme: MDR, code: 10060933, cui: C0877248, tui: T046]"
+        ],
+        "FEVER": [
+            "start: 901",
+            "end: 906",
+            "polarity: 1",
+            "[codingScheme: MDR, code: 10005911, cui: C0015967, tui: T184]",
+            "[codingScheme: MDR, code: 10043204, cui: C0015967, tui: T184]",
+            "[codingScheme: MDR, code: 10020843, cui: C0015967, tui: T184]",
+            "[codingScheme: MDR, code: 10020083, cui: C0015967, tui: T184]",
+            "[codingScheme: SNOMEDCT_US, code: 386661006, cui: C0015967, tui: T184]",
+            "[codingScheme: MDR, code: 10037660, cui: C0015967, tui: T184]",
+            "[codingScheme: MDR, code: 10016558, cui: C0015967, tui: T184]",
+            "[codingScheme: MDR, code: 10037668, cui: C0015967, tui: T184]",
+            "[codingScheme: SNOMEDCT_US, code: 50177009, cui: C0015967, tui: T184]",
+            "[codingScheme: MDR, code: 10073718, cui: C0015967, tui: T184]"
+        ],
+        "RESPONSIBLE": [
+            "start: 3955",
+            "end: 3966",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 394851003, cui: C1273518, tui: T033]"
+        ],
+        "DIVERTICULA": [
+            "start: 2576",
+            "end: 2587",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 31113003, cui: C0012817, tui: T046]",
+            "[codingScheme: MDR, code: 10013530, cui: C0012817, tui: T046]",
+            "[codingScheme: MDR, code: 10013554, cui: C0012817, tui: T046]"
+        ],
+        "INITIATION": [
+            "start: 4580",
+            "end: 4590",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 312009002, cui: C0589507, tui: T041]"
+        ],
+        "PERFORATIONS": [
+            "start: 3535",
+            "end: 3547",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 255312002, cui: C0549099, tui: T033]",
+            "[codingScheme: MDR, code: 10076705, cui: C0549099, tui: T033]",
+            "[codingScheme: SNOMEDCT_US, code: 263837003, cui: C0549099, tui: T033]",
+            "[codingScheme: SNOMEDCT_US, code: 36191001, cui: C0549099, tui: T033]"
+        ],
+        "FEBRILE": [
+            "start: 959",
+            "end: 966",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 386661006, cui: C0015967, tui: T184]",
+            "[codingScheme: MDR, code: 10037660, cui: C0015967, tui: T184]",
+            "[codingScheme: MDR, code: 10016558, cui: C0015967, tui: T184]",
+            "[codingScheme: MDR, code: 10037668, cui: C0015967, tui: T184]",
+            "[codingScheme: SNOMEDCT_US, code: 50177009, cui: C0015967, tui: T184]",
+            "[codingScheme: MDR, code: 10073718, cui: C0015967, tui: T184]",
+            "[codingScheme: MDR, code: 10005911, cui: C0015967, tui: T184]",
+            "[codingScheme: MDR, code: 10043204, cui: C0015967, tui: T184]",
+            "[codingScheme: MDR, code: 10020843, cui: C0015967, tui: T184]",
+            "[codingScheme: MDR, code: 10020083, cui: C0015967, tui: T184]"
+        ],
+        "DRUG REACTION": [
+            "start: 4050",
+            "end: 4063",
+            "polarity: 1",
+            "[codingScheme: MDR, code: 10067033, cui: C0041755, tui: T046]",
+            "[codingScheme: SNOMEDCT_US, code: 62014003, cui: C0041755, tui: T046]",
+            "[codingScheme: MDR, code: 10061623, cui: C0041755, tui: T046]",
+            "[codingScheme: SNOMEDCT_US, code: 264519003, cui: C0041755, tui: T046]"
+        ],
+        "IMMUNE RESPONSE": [
+            "start: 2948",
+            "end: 2963",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 103082006, cui: C0301872, tui: T042]",
+            "[codingScheme: SNOMEDCT_US, code: 35024006, cui: C0301872, tui: T042]"
+        ],
+        "PYURIA": [
+            "start: 1177",
+            "end: 1183",
+            "polarity: 1",
+            "[codingScheme: MDR, code: 10046621, cui: C0034359, tui: T033]",
+            "[codingScheme: SNOMEDCT_US, code: 4800001, cui: C0034359, tui: T033]",
+            "[codingScheme: MDR, code: 10046666, cui: C0034359, tui: T033]",
+            "[codingScheme: MDR, code: 10037686, cui: C0034359, tui: T033]",
+            "[codingScheme: SNOMEDCT_US, code: 275765006, cui: C0034359, tui: T033]"
+        ],
+        "POSSIBLE": [
+            "start: 3273",
+            "end: 3281",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 371930009, cui: C0332149, tui: T033]"
+        ],
+        "BLOCKS": [
+            "start: 3052",
+            "end: 3058",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 26036001, cui: C0028778, tui: T046]",
+            "[codingScheme: MDR, code: 10061876, cui: C0028778, tui: T046]"
+        ],
+        "PERIOD": [
+            "start: 3648",
+            "end: 3654",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 248957007, cui: C0025344, tui: T040]"
+        ],
+        "LIKELY": [
+            "start: 2552",
+            "end: 2558",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 452201000124102, cui: C0332148, tui: T033]",
+            "[codingScheme: SNOMEDCT_US, code: 2931005, cui: C0332148, tui: T033]"
+        ],
+        "ACTIVITY": [
+            "start: 4307",
+            "end: 4315",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 68130003, cui: C0026606, tui: T056]",
+            "[codingScheme: SNOMEDCT_US, code: 48761009, cui: C0026606, tui: T056]"
+        ],
+        "PERFORATION": [
+            "start: 2864",
+            "end: 2875",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 36191001, cui: C0549099, tui: T033]",
+            "[codingScheme: SNOMEDCT_US, code: 255312002, cui: C0549099, tui: T033]",
+            "[codingScheme: MDR, code: 10076705, cui: C0549099, tui: T033]",
+            "[codingScheme: SNOMEDCT_US, code: 263837003, cui: C0549099, tui: T033]"
         ]
     },
     "RouteAnnotation": {},
-    "DateAnnotation": {},
-    "MeasurementAnnotation": {},
-    "ProcedureMention": {},
-    "TimeMention": {},
+    "DateAnnotation": {
+        "NOVEMBER 2015": [
+            "start: 430",
+            "end: 443",
+            "polarity: 0"
+        ]
+    },
+    "MeasurementAnnotation": {
+        "2.5 MG": [
+            "start: 841",
+            "end: 847",
+            "polarity: 0"
+        ],
+        "7.5 MG": [
+            "start: 654",
+            "end: 660",
+            "polarity: 0"
+        ],
+        "5 MG": [
+            "start: 557",
+            "end: 561",
+            "polarity: 0"
+        ]
+    },
+    "ProcedureMention": {
+        "BLOOD CULTURE": [
+            "start: 1228",
+            "end: 1241",
+            "polarity: 0",
+            "[codingScheme: MDR, code: 10005485, cui: C0200949, tui: T059]",
+            "[codingScheme: MDR, code: 10070684, cui: C0200949, tui: T059]",
+            "[codingScheme: SNOMEDCT_US, code: 30088009, cui: C0200949, tui: T059]",
+            "[codingScheme: MDR, code: 10070686, cui: C0200949, tui: T059]",
+            "[codingScheme: MDR, code: 10011618, cui: C0200949, tui: T059]"
+        ],
+        "ANASTOMOSIS": [
+            "start: 1847",
+            "end: 1858",
+            "polarity: -1",
+            "[codingScheme: SNOMEDCT_US, code: 257741005, cui: C0677554, tui: T061]"
+        ],
+        "SUPPORTIVE CARE": [
+            "start: 1365",
+            "end: 1380",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 243114000, cui: C0344211, tui: T061]",
+            "[codingScheme: SNOMEDCT_US, code: 38678006, cui: C0344211, tui: T061]",
+            "[codingScheme: MDR, code: 10068369, cui: C0344211, tui: T061]"
+        ],
+        "ADMINISTRATION": [
+            "start: 3229",
+            "end: 3243",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 416118004, cui: C1533734, tui: T061]"
+        ],
+        "PRESENCE": [
+            "start: 3452",
+            "end: 3460",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 386397008, cui: C0392148, tui: T061]"
+        ],
+        "TREATMENT": [
+            "start: 343",
+            "end: 352",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 277132007, cui: C0087111, tui: T061]",
+            "[codingScheme: MDR, code: 10053757, cui: C0087111, tui: T061]",
+            "[codingScheme: SNOMEDCT_US, code: 276239002, cui: C0087111, tui: T061]"
+        ],
+        "CLOSURE": [
+            "start: 1735",
+            "end: 1742",
+            "polarity: 1",
+            "[codingScheme: SNOMEDCT_US, code: 112695004, cui: C0185003, tui: T061]"
+        ],
+        "URINE ANALYSIS": [
+            "start: 1153",
+            "end: 1167",
+            "polarity: 0",
+            "[codingScheme: SNOMEDCT_US, code: 167217005, cui: C0042014, tui: T059]",
+            "[codingScheme: MDR, code: 10046509, cui: C0042014, tui: T059]",
+            "[codingScheme: SNOMEDCT_US, code: 27171005, cui: C0042014, tui: T059]",
+            "[codingScheme: MDR, code: 10046614, cui: C0042014, tui: T059]"
+        ],
+        "COLOSTOMY": [
+            "start: 1712",
+            "end: 1721",
+            "polarity: 1",
+            "[codingScheme: MDR, code: 10010041, cui: C0009410, tui: T061]",
+            "[codingScheme: SNOMEDCT_US, code: 398740003, cui: C0009410, tui: T061]"
+        ],
+        "ULTRASONOGRAPHY": [
+            "start: 1111",
+            "end: 1126",
+            "polarity: 0",
+            "[codingScheme: MDR, code: 10060216, cui: C0041618, tui: T060]",
+            "[codingScheme: SNOMEDCT_US, code: 278292003, cui: C0041618, tui: T060]",
+            "[codingScheme: MDR, code: 10014122, cui: C0041618, tui: T060]",
+            "[codingScheme: SNOMEDCT_US, code: 359659005, cui: C0041618, tui: T060]",
+            "[codingScheme: MDR, code: 10065594, cui: C0041618, tui: T060]",
+            "[codingScheme: MDR, code: 10045434, cui: C0041618, tui: T060]",
+            "[codingScheme: SNOMEDCT_US, code: 16310003, cui: C0041618, tui: T060]",
+            "[codingScheme: MDR, code: 10012694, cui: C0041618, tui: T060]"
+        ],
+        "TNF": [
+            "start: 4278",
+            "end: 4281",
+            "polarity: 0",
+            "[codingScheme: MDR, code: 10060016, cui: C1168005, tui: T059]",
+            "[codingScheme: MDR, code: 10059981, cui: C1168005, tui: T059]"
+        ]
+    },
+    "TimeMention": {
+        "12 YEARS": [
+            "start: 504",
+            "end: 512",
+            "polarity: 0"
+        ],
+        "NOVEMBER 2015": [
+            "start: 430",
+            "end: 443",
+            "polarity: 0"
+        ],
+        "6 MONTHS LATER": [
+            "start: 1789",
+            "end: 1803",
+            "polarity: 0"
+        ],
+        "THE FOLLOW-UP PERIOD": [
+            "start: 3634",
+            "end: 3654",
+            "polarity: 0"
+        ],
+        "30-DAY": [
+            "start: 2075",
+            "end: 2081",
+            "polarity: 0"
+        ],
+        "EARLY NOVEMBER OF 2015": [
+            "start: 863",
+            "end: 885",
+            "polarity: 0"
+        ],
+        "IN RECENT YEARS": [
+            "start: 2141",
+            "end: 2156",
+            "polarity: 0"
+        ],
+        "FIVE MONTHS": [
+            "start: 514",
+            "end: 525",
+            "polarity: 0"
+        ],
+        "ADMISSION": [
+            "start: 533",
+            "end: 542",
+            "polarity: 0"
+        ],
+        "IN THE FOLLOW- ING DAYS": [
+            "start: 780",
+            "end: 803",
+            "polarity: 0"
+        ],
+        "IN 14 DAYS": [
+            "start: 1349",
+            "end: 1359",
+            "polarity: 0"
+        ],
+        "ONLY 20 DAYS LATER": [
+            "start: 1382",
+            "end: 1400",
+            "polarity: 0"
+        ],
+        "5 MG TWICE DAILY)": [
+            "start: 557",
+            "end: 574",
+            "polarity: 0"
+        ],
+        "DAS-28": [
+            "start: 723",
+            "end: 729",
+            "polarity: 0"
+        ],
+        "THE FIRST DAY": [
+            "start: 1050",
+            "end: 1063",
+            "polarity: 0"
+        ]
+    },
     "StrengthUnitAnnotation": {}
 }
