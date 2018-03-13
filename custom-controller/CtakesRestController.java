@@ -125,16 +125,16 @@ public class CtakesRestController {
                     _engine.process(jcas);
                     resultMap = formatResults(jcas);
                     String tlinkStr = getTlinks(jcas);
-                    String[] tlinkArray = tlinkStr.split(",");
-                    List<String> tlinkList = new ArrayList<>();
                     if(tlinkStr != null) {
-                        Map<String,List<String>> tlinkMap = new HashMap<>();
-                        tlinkList.add(tlinkStr);
-                        //tlinkMap.put("TLINKS:", tlinkList);
-                        //resultMap.put("TlinkDetails", tlinkMap);
-                    }
-                    for (MentionNames mentionName: MentionNames.values()) {
-                        tlinkExtractor(resultMap, tlinkArray, mentionName.name());
+                        String[] tlinkArray = tlinkStr.split(",");
+                        List<String> tlinkList = new ArrayList<>();
+                        if (tlinkStr != null) {
+                            Map<String, List<String>> tlinkMap = new HashMap<>();
+                            tlinkList.add(tlinkStr);
+                        }
+                        for (MentionNames mentionName : MentionNames.values()) {
+                            tlinkExtractor(resultMap, tlinkArray, mentionName.name());
+                        }
                     }
 
                     /*RelationExtractorHelper consumer = new RelationExtractorHelper();
