@@ -3,7 +3,6 @@ package org.apache.ctakes.rest.util;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamReader;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
 
@@ -32,6 +31,7 @@ public class XMLParser {
         List<String> dateList = new ArrayList<>();
         List<String> anatomicalList = new ArrayList<>();
         List<String> medicalList = new ArrayList<>();
+        List<String> labList = new ArrayList<>();
 
         Map<String, String> disorderPosMap = new HashMap<>();
         Map<String, String> findingsPosMap = new HashMap<>();
@@ -47,6 +47,7 @@ public class XMLParser {
         Map<String, String> measurementPosMap = new HashMap<>();
         Map<String, String> anatomicalPosMap = new HashMap<>();
         Map<String, String> medicalPosMap = new HashMap<>();
+        Map<String, String> labPosMap = new HashMap<>();
 
 
         Map<String, List<String>> disorderDetailMap = new HashMap<>();
@@ -63,6 +64,7 @@ public class XMLParser {
         Map<String, List<String>> dateDetailMap = new HashMap<>();
         Map<String, List<String>> anatomicalDetailMap = new HashMap<>();
         Map<String, List<String>> medicalDetailMap = new HashMap<>();
+        Map<String, List<String>> labDetailMap = new HashMap<>();
 
         while (streamReader.hasNext()) {
             if (streamReader.isStartElement()) {
@@ -86,6 +88,7 @@ public class XMLParser {
                     measurementList = extractData(streamReader, analysisText, SemanticNames.MeasurementAnnotation.name(), measurementPosMap, measurementList, ontologyArrayMap);
                     anatomicalList = extractData(streamReader, analysisText, SemanticNames.AnatomicalSiteMention.name(), anatomicalPosMap, anatomicalList, ontologyArrayMap);
                     medicalList = extractData(streamReader, analysisText, SemanticNames.MedicationMention.name(), medicalPosMap, medicalList, ontologyArrayMap);
+                    labList = extractData(streamReader, analysisText, SemanticNames.LabMention.name(), labPosMap, labList, ontologyArrayMap);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -102,20 +105,21 @@ public class XMLParser {
             streamReader.next();
         }
 
-        disorderDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, disorderDetailMap, disorderList, disorderPosMap);
-        findingsDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, findingsDetailMap, findingsList, findingsPosMap);
-        procedureDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, procedureDetailMap, procedureList, procedurePosMap);
-        timeDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, timeDetailMap, timeList, timePosMap);
-        fractionStrengthDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, fractionStrengthDetailMap, fractionStrengthList, fractionStrengthPosMap);
-        drugChangeStatusDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, drugChangeStatusDetailMap, drugChangeStatusList, drugChangeStatusPosMap);
-        strengthUnitDetaillMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, strengthUnitDetaillMap, strengthUnitList, strengthUnitPosMap);
-        strengthDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, strengthDetailMap, strengthList, strengthPosMap);
-        routeDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, routeDetailMap, routeList, routePosMap);
-        frequencyUnitDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, frequencyUnitDetailMap, frequencyUnitList, frequencyPosMap);
-        measurementDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, measurementDetailMap, measurementList, measurementPosMap);
-        dateDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, dateDetailMap, dateList, datePosMap);
-        anatomicalDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, anatomicalDetailMap, anatomicalList, anatomicalPosMap);
-        medicalDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, medicalDetailMap, medicalList, medicalPosMap);
+        disorderDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, disorderDetailMap, disorderList, disorderPosMap,SemanticNames.DiseaseDisorderMention.name() );
+        findingsDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, findingsDetailMap, findingsList, findingsPosMap, SemanticNames.SignSymptomMention.name());
+        procedureDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, procedureDetailMap, procedureList, procedurePosMap,SemanticNames.ProcedureMention.name() );
+        timeDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, timeDetailMap, timeList, timePosMap, SemanticNames.TimeMention.name());
+        fractionStrengthDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, fractionStrengthDetailMap, fractionStrengthList, fractionStrengthPosMap, SemanticNames.FractionStrengthAnnotation.name());
+        drugChangeStatusDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, drugChangeStatusDetailMap, drugChangeStatusList, drugChangeStatusPosMap, SemanticNames.DrugChangeStatusAnnotation.name() );
+        strengthUnitDetaillMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, strengthUnitDetaillMap, strengthUnitList, strengthUnitPosMap, SemanticNames.StrengthUnitAnnotation.name());
+        strengthDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, strengthDetailMap, strengthList, strengthPosMap, SemanticNames.StrengthAnnotation.name());
+        routeDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, routeDetailMap, routeList, routePosMap, SemanticNames.RouteAnnotation.name());
+        frequencyUnitDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, frequencyUnitDetailMap, frequencyUnitList, frequencyPosMap, SemanticNames.FrequencyUnitAnnotation.name());
+        measurementDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, measurementDetailMap, measurementList, measurementPosMap, SemanticNames.MeasurementAnnotation.name());
+        dateDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, dateDetailMap, dateList, datePosMap,SemanticNames.DateAnnotation.name() );
+        anatomicalDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, anatomicalDetailMap, anatomicalList, anatomicalPosMap,SemanticNames.AnatomicalSiteMention.name() );
+        medicalDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, medicalDetailMap, medicalList, medicalPosMap, SemanticNames.MedicationMention.name());
+        labDetailMap = processUMLSDetail(ontologyArrayMap, umlsConceptMap, labDetailMap, labList, labPosMap, SemanticNames.LabMention.name());
 
         Map<String, Map<String, List<String>>> responseMap = new HashMap<>();
         responseMap.put(SemanticNames.DiseaseDisorderMention.name(), disorderDetailMap);
@@ -132,11 +136,12 @@ public class XMLParser {
         responseMap.put(SemanticNames.FrequencyUnitAnnotation.name(),frequencyUnitDetailMap);
         responseMap.put(SemanticNames.DateAnnotation.name(),dateDetailMap);
         responseMap.put(SemanticNames.MeasurementAnnotation.name(),measurementDetailMap);
+        //responseMap.put(SemanticNames.LabMention.name(),labDetailMap);
         return responseMap;
     }
 
     private Map<String, List<String>> processUMLSDetail(Map<String, String> ontologyArrayMap, Map<String, List> umlsConceptMap, Map<String, List<String>> semanticDetailsMap,
-                                                List<String> sematicList, Map<String, String> semanticPosMap) {
+                                                        List<String> sematicList, Map<String, String> semanticPosMap, String mentionName) {
         for (String semanticName : sematicList) {
             List<String> semanticDetailsList = semanticDetailsMap.get(semanticName);
             String[] posDetail = semanticPosMap.get(semanticName).split(",");
@@ -148,7 +153,7 @@ public class XMLParser {
             if(polarityMap.get(semanticName) != null) {
                 semanticDetailsList.add("polarity: " + polarityMap.get(semanticName));
             }
-            String ontologyArrayRawString = ontologyArrayMap.get(semanticName);
+            String ontologyArrayRawString = ontologyArrayMap.get(semanticName + "_" + mentionName);
             if(ontologyArrayRawString != null) {
                 String[] ontologyStringArr = ontologyArrayRawString.split("\\s");
                 for (String ontologyString : ontologyStringArr) {
@@ -199,7 +204,7 @@ public class XMLParser {
                                     if (start <= startPos && end == endPos) {
                                         semanticList.remove(semanticTerm);
                                         semanticList.add(chunkUpper);
-                                        ontologyArrayMap.put(chunkUpper, ontologyConceptArr);
+                                        ontologyArrayMap.put(chunkUpper + "_" + mentionName, ontologyConceptArr);
                                         semanticPosMap.remove(semanticTerm);
                                         semanticPosMap.put(chunkUpper, start + "," + end);
                                         isFound = true;
@@ -218,7 +223,7 @@ public class XMLParser {
                     if(polarity!=null) {
                         polarityMap.put(chunkUpper,polarity);
                     }
-                    ontologyArrayMap.put(chunkUpper, ontologyConceptArr);
+                    ontologyArrayMap.put(chunkUpper + "_" + mentionName, ontologyConceptArr);
                     //System.out.println("mentionName -> " + mentionName + " part -> " + chunkUpper + " -- " + start + "," + end);
                     semanticPosMap.put(chunkUpper, start + "," + end);
                 }
@@ -232,6 +237,6 @@ public class XMLParser {
         DiseaseDisorderMention, SignSymptomMention, ProcedureMention, TimeMention,
         AnatomicalSiteMention, FractionStrengthAnnotation, DrugChangeStatusAnnotation,
         StrengthUnitAnnotation, StrengthAnnotation, RouteAnnotation, FrequencyUnitAnnotation, DateAnnotation,
-        MeasurementAnnotation, MedicationMention
+        MeasurementAnnotation, MedicationMention, LabMention
     }
 }
