@@ -18,11 +18,16 @@
  */
 package org.apache.ctakes.rest.service;
 
+import ca.uhn.fhir.context.FhirContext;
+import ca.uhn.fhir.parser.IParser;
+import opennlp.tools.coref.mention.Mention;
 import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.ctakes.core.pipeline.PipelineBuilder;
 import org.apache.ctakes.core.pipeline.PiperFileReader;
 import org.apache.ctakes.core.util.textspan.DefaultTextSpan;
 import org.apache.ctakes.core.util.textspan.TextSpan;
+import org.apache.ctakes.fhir.cc.FhirDocComposer;
+import org.apache.ctakes.fhir.resource.PractitionerCtakes;
 import org.apache.ctakes.relationextractor.pipelines.RelationExtractorConsumer;
 import org.apache.ctakes.rest.util.RelationExtractorHelper;
 import org.apache.ctakes.rest.util.XMLParser;
@@ -37,6 +42,7 @@ import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.util.JCasPool;
+import org.hl7.fhir.dstu3.model.Bundle;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
@@ -60,6 +66,10 @@ public class CtakesRestController {
     private static final String DEFAULT_PIPELINE = "Default";
     private static final String FULL_PIPELINE = "Full";
     private static final Map<String, PipelineRunner> _pipelineRunners = new HashMap<>();
+    public enum MentionNames {
+        DiseaseDisorderMention, SignSymptomMention, ProcedureMention,
+        AnatomicalSiteMention, MedicationMention, LabMention
+    }
 
     @PostConstruct
     public void init() throws ServletException {
@@ -118,15 +128,33 @@ public class CtakesRestController {
                     jcas = _pool.getJCas(-1);
                     jcas.setDocumentText(text);
                     _engine.process(jcas);
-                    resultMap = formatResults(jcas);
+                    final Bundle bundle = FhirDocComposer.composeDocFhir(jcas, PractitionerCtakes.getInstance());
+                    final FhirContext fhirContext = FhirContext.forDstu3();
+                    final IParser jsonParser = fhirContext.newJsonParser();
+                    jsonParser.setPrettyPrint( true );
+                    final String jsonStr = jsonParser.encodeResourceToString( bundle );
+                    //System.out.println("FHIR JSON - " + json);
+                    List fhirList = new ArrayList<String>();
+                    fhirList.add(jsonStr);
+                    Map fhirValueMap = new HashMap<String,List>();
+                    fhirValueMap.put("FhirValue",fhirList);
+                    resultMap = new HashMap<String, Map<String, List<String>>>();
+                    resultMap.put("FHIR_JSON",fhirValueMap);
+
+                    /* resultMap = formatResults(jcas);
                     String tlinkStr = getTlinks(jcas);
                     if(tlinkStr != null) {
-                        Map<String,List<String>> tlinkMap = new HashMap<>();
+                        String[] tlinkArray = tlinkStr.split(",");
                         List<String> tlinkList = new ArrayList<>();
-                        tlinkList.add(tlinkStr);
-                        tlinkMap.put("TLINKS:", tlinkList);
-                        resultMap.put("TlinkDetails", tlinkMap);
+                        if (tlinkStr != null) {
+                            Map<String, List<String>> tlinkMap = new HashMap<>();
+                            tlinkList.add(tlinkStr);
+                        }
+                        for (MentionNames mentionName : MentionNames.values()) {
+                            tlinkExtractor(resultMap, tlinkArray, mentionName.name());
+                        }
                     }
+
                     RelationExtractorHelper consumer = new RelationExtractorHelper();
                     String relationDetails = consumer.process(jcas);
                     if(relationDetails != null) {
@@ -135,7 +163,7 @@ public class CtakesRestController {
                         relationList.add(relationDetails);
                         relationMap.put("RELATIONS:", relationList);
                         resultMap.put("RelationDetails", relationMap);
-                    }
+                    }*/
                     _pool.releaseJCas(jcas);
                 } catch (Exception e) {
                     LOGGER.error("Error processing Analysis engine");
@@ -177,5 +205,42 @@ public class CtakesRestController {
             }
             return sb.toString();
         }
+    }
+
+    private static void tlinkExtractor(Map<String, Map<String, List<String>>> resultMap, String[] tlinkArray, String mentionName) {
+        Map<String,List<String>>  mentionMap = resultMap.get(mentionName);
+        if(mentionMap == null) {
+            return;
+        }
+        Iterator itr = mentionMap.entrySet().iterator();
+        while (itr.hasNext()) {
+            List<String> mentionValList = null;
+            Map.Entry entry = (Map.Entry) itr.next();
+            String mentionValue = (String)entry.getKey();
+            for(String tlinkString : tlinkArray) {
+                if(tlinkString != null) {
+                    String matcher = mentionValue + " CONTAINS";
+                    String tlinkValue = "";
+                    tlinkString = tlinkString.toUpperCase();
+                    matcher = matcher.toUpperCase();
+                    if(tlinkString.contains(matcher)) {
+                        int startPos = tlinkString.indexOf(matcher);
+                        /*int endPos = tlinkString.indexOf(",",startPos);
+                        if(endPos == -1) {
+                            endPos = tlinkString.length();
+                        }*/
+                        tlinkValue = tlinkString.substring(startPos + matcher.length());
+                    }
+                    mentionValList = (List) entry.getValue();
+                    if(!"".equals(tlinkValue)) {
+                        mentionValList.add("tlink: " + tlinkValue);
+                    }
+                }
+            }
+            if(mentionValList != null) {
+                mentionMap.put(mentionValue,mentionValList);
+            }
+        }
+        resultMap.put(mentionName,mentionMap);
     }
 }
