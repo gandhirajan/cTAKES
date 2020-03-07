@@ -153,9 +153,9 @@
 				<scope>test</scope>
 			</dependency>
 			<dependency>
-				<groupId>log4j</groupId>
-				<artifactId>log4j</artifactId>
-				<version>1.2.17</version>
+    				<groupId>org.apache.logging.log4j</groupId>
+    				<artifactId>log4j-core</artifactId>
+    				<version>2.13.1</version>
 			</dependency>
 			<!-- There is an xml=apis 2.0 in maven central, but it is pom only, therefore broken.  -->
 			<dependency>
@@ -185,9 +185,9 @@
 				<version>2.7.7</version>
 			</dependency>
 			<dependency>
-				<groupId>org.apache.lucene</groupId>
-				<artifactId>lucene-core</artifactId>
-				<version>4.0.0</version>
+    				<groupId>org.apache.lucene</groupId>
+    				<artifactId>lucene-core</artifactId>
+    				<version>8.4.1</version>
 			</dependency>
 			<!--<dependency>-->
 				<!--<groupId>org.apache.lucene</groupId>-->
@@ -322,17 +322,17 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-core</artifactId>
-				<version>4.3.12.RELEASE</version>
+				<version>4.3.26.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context</artifactId>
-				<version>4.3.12.RELEASE</version>
+				<version>4.3.26.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-web</artifactId>
-				<version>4.3.12.RELEASE</version>
+				<version>4.3.26.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>edu.mit.findstruct</groupId>
